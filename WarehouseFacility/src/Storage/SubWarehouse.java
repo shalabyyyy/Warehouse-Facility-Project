@@ -27,6 +27,10 @@ public class SubWarehouse {
         
  
         maxChosenProfit =  0; //Update with your answer.
+        
+        //TODO: Enter your GUC mail here
+        String email = "";
+        System.out.println("Email: " + email);
     }
 		
 	
@@ -50,7 +54,7 @@ public class SubWarehouse {
 		SW.itemWeights.add(80);       // itemWeights = {56 , 59 , 80 , 64, 75 , 17};
 		SW.itemWeights.add(64);
 		SW.itemWeights.add(75);
-		SW.itemWeights.add(17);
+		SW.itemWeights.add(17);	
 		
 		
 		SW.itemProfits.add(50);                                
