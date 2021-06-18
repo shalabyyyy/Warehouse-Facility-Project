@@ -42,7 +42,6 @@ public class DataLoader {
 				weightArray.add(s2.nextInt());
 				priceArray.add(s2.nextInt());
 			}
-			maxWeight = 997;
 			
 			s2.close();
 			return;
