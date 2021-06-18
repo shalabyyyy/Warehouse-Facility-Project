@@ -98,6 +98,25 @@ public class SubWarehouse {
 		*
 		*
 		*/
+		
+		
+		//If this gives you a memory heap error / stack overflow , try with a lower number dataset
+		
+		
+		
+//		DataLoader.loadArray("kp20.txt", SW.itemWeights, SW.itemProfits, SW.maxCapacity);
+//		  
+//		SW.maxCapacity= 9819;
+//		SW.availableItems = 2000  ;
+//		SW.optimizeSelection();
+//		System.out.println( "Max Profit " + SW.maxChosenProfit); // should be Max Profit 594669   
+//		
+//	
+		
+		
+		
+		//if it still gives you stack overflow then your code is not optimized enough =)
+		
 
 
 		
