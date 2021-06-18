@@ -30,7 +30,7 @@ public class TestClass {
 		sb.availableItems = 6; 			   //available items are 6
 		
 		sb.optimizeSelection();
-		assertEquals("Should be equal kaza", 150, sb.maxChosenProfit, 0);
+		assertEquals("normal run Should be equal 150", 150, sb.maxChosenProfit, 0);
 		//fail("Not yet implemented");
 	}
 	
@@ -39,16 +39,18 @@ public class TestClass {
 		SubWarehouse sb = new SubWarehouse();
 
 		
-		DataLoader.loadArray("kp100.txt", sb.itemWeights, sb.itemProfits, sb.maxCapacity);
+		
+		DataLoader.loadArray("kp20.txt", sb.itemWeights, sb.itemProfits, sb.maxCapacity);
 		  
-		sb.maxCapacity= 49877;
-		sb.availableItems = 10000 ;
+		sb.maxCapacity= 9819;
+		sb.availableItems = 2000  ;
 		sb.optimizeSelection();
-		System.out.println( "Max Profit " + sb.maxChosenProfit); // should be Max Profit 594669   
 		
+		assertEquals("DataSet 2 should be equal 8919", 8919, sb.maxChosenProfit, 0);
+
+
 		
-		
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 
 	}
 
