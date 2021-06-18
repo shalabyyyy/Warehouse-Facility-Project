@@ -15,7 +15,7 @@ public class SubWarehouse {
 	
 	
 	
-	public void optimizeSelection()
+public void optimizeSelection()
 	{
 		//TODO: Create a method that optimizes the selection of items in order to produce the most profit and make the most out of the storage space.
 		
@@ -23,23 +23,28 @@ public class SubWarehouse {
 		//You're allowed to use the other defined methods.
 		
 		
-		int i, w;
-        int K[][] = new int[availableItems + 1][maxCapacity + 1];
+		int i;
+		int w;
+        int tabulation[][] = new int[availableItems + 1][maxCapacity + 1];
         
         for (i = 0; i <= availableItems; i++)
         {
             for (w = 0; w <= maxCapacity; w++)
             {
-                if (i == 0 || w == 0)
-                    K[i][w] = 0;
-                else if (itemWeights.get(i - 1) <= w)
-                    K[i][w]  = max(itemProfits.get(i - 1)+ K[i - 1][w - itemWeights.get(i - 1)],  K[i - 1][w]);
+                if (i == 0 || w == 0){
+                    tabulation[i][w] = 0;
+				}
+                else if (itemWeights.get(i - 1) <= w){
+                    tabulation[i][w]  = max(itemProfits.get(i - 1)+ tabulation[i - 1][w - itemWeights.get(i - 1)],  tabulation[i - 1][w]);
+				}
                 else
-                    K[i][w] = K[i - 1][w];
+				{
+                    tabulation[i][w] = tabulation[i - 1][w];
+				}
             }
         }
  
-        maxChosenProfit =  K[availableItems][maxCapacity];
+        maxChosenProfit =  tabulation[availableItems][maxCapacity];
     }
 		
 	

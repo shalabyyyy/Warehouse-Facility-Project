@@ -1,0 +1,45 @@
+..java:1:    PackageCase:    Package name contains upper case characters
+..java:3:    UnnecessaryImport:      Unused import 'java.io.Console'
+..java:5:    AtLeastOneConstructor:  Each class should declare at least one constructor
+..java:8:    CommentDefaultAccessModifier:   To avoid mistakes add a comment at the beginning of the maxCapacity field if you want a default 
+access modifier
+..java:8:    DefaultPackage: Use explicit scoping instead of the default package private level
+..java:9:    LooseCoupling:  Avoid using implementation types like 'ArrayList'; use the interface instead
+..java:9:    CommentDefaultAccessModifier:   To avoid mistakes add a comment at the beginning of the itemWeights field if you want a default 
+access modifier
+..java:9:    DefaultPackage: Use explicit scoping instead of the default package private level
+..java:10:   LooseCoupling:  Avoid using implementation types like 'ArrayList'; use the interface instead
+..java:10:   CommentDefaultAccessModifier:   To avoid mistakes add a comment at the beginning of the itemProfits field if you want a default 
+access modifier
+..java:10:   DefaultPackage: Use explicit scoping instead of the default package private level
+..java:11:   CommentDefaultAccessModifier:   To avoid mistakes add a comment at the beginning of the maxChosenProfit field if you want a default access modifier
+..java:11:   DefaultPackage: Use explicit scoping instead of the default package private level
+..java:12:   CommentDefaultAccessModifier:   To avoid mistakes add a comment at the beginning of the availableItems field if you want a default access modifier
+..java:12:   DefaultPackage: Use explicit scoping instead of the default package private level
+..java:18:   CyclomaticComplexity:   The method 'optimizeSelection()' has a cyclomatic complexity of 6.
+..java:26:   ShortVariable:  Avoid variables with short names like i
+..java:27:   ShortVariable:  Avoid variables with short names like w
+..java:52:   ShortVariable:  Avoid variables with short names like a
+..java:52:   ShortVariable:  Avoid variables with short names like b
+..java:52:   MethodArgumentCouldBeFinal:     Parameter 'a' is not assigned and could be declared final
+..java:52:   MethodArgumentCouldBeFinal:     Parameter 'b' is not assigned and could be declared final
+..java:54:   UselessParentheses:     Useless parentheses.
+..java:62:   MethodArgumentCouldBeFinal:     Parameter 'args' is not assigned and could be declared final
+..java:64:   ShortVariable:  Avoid variables with short names like SW
+..java:64:   LocalVariableCouldBeFinal:      Local variable 'SW' could be declared final
+..java:64:   LocalVariableNamingConventions: The local variable name 'SW' doesn't match '[a-z][a-zA-Z0-9]*'
+..java:67:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:68:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:69:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:70:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:71:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:72:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:75:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:76:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:77:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:78:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:79:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:80:   LawOfDemeter:   Potential violation of Law of Demeter (static property access)
+..java:94:   SystemPrintln:  System.out.println is used
+..java:124:  SystemPrintln:  System.out.println is used
+LoosePackageCoupling    -       No packages or classes specified
