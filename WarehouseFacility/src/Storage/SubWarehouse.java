@@ -20,17 +20,26 @@ public class SubWarehouse {
 		//TODO: Create a method that optimizes the selection of items in order to produce the most profit and make the most out of the storage space.
 		
 		//Your code here
-		//You're allowed to use any other pre-defined methods.
+		//You're allowed to use the other defined methods.
 		
 		
-	
+		int i, w;
+        int K[][] = new int[availableItems + 1][maxCapacity + 1];
         
+        for (i = 0; i <= availableItems; i++)
+        {
+            for (w = 0; w <= maxCapacity; w++)
+            {
+                if (i == 0 || w == 0)
+                    K[i][w] = 0;
+                else if (itemWeights.get(i - 1) <= w)
+                    K[i][w]  = max(itemProfits.get(i - 1)+ K[i - 1][w - itemWeights.get(i - 1)],  K[i - 1][w]);
+                else
+                    K[i][w] = K[i - 1][w];
+            }
+        }
  
-        maxChosenProfit =  0; //Update with your answer.
-        
-        //TODO: Enter your GUC mail here
-        String email = "";
-        System.out.println("Email: " + email);
+        maxChosenProfit =  K[availableItems][maxCapacity];
     }
 		
 	
@@ -39,6 +48,7 @@ public class SubWarehouse {
 	    {
 	      return (a > b) ? a : b;
 	    }
+	
 	
 	
 	
@@ -99,6 +109,16 @@ public class SubWarehouse {
 		*
 		*/
 
+		
+		
+		DataLoader.loadArray("kp20.txt", SW.itemWeights, SW.itemProfits, SW.maxCapacity);
+		  
+		SW.maxCapacity= 9819;
+		SW.availableItems = 2000  ;
+		SW.optimizeSelection();
+		System.out.println( "Max Profit " + SW.maxChosenProfit); // should be Max Profit 8919   
+		
+	
 
 		
 		
