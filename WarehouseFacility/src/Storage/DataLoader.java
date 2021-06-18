@@ -16,7 +16,6 @@ public class DataLoader {
 	public static void loadArray(String file , ArrayList<Integer> weightArray , ArrayList<Integer> priceArray , int maxWeight)
 	{
 		int ctr = 0;
-		System.out.println(ctr);
 
 		try {
 			Scanner s1 = new Scanner(new File(file));
